@@ -21,6 +21,11 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $message = $_POST["message"];
 
+if ($name === "" || $email === "" || $message === "")
+{
+    die("All fields are required");
+}
+
 $sql = "INSERT INTO messages (name, email, message)
         VALUES (?, ?, ?)";
 
