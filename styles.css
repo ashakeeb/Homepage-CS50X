@@ -5,7 +5,7 @@ body
 
 .container
 {
-    background-color:#fff;
+    background-color:#f2f4f4f7;
     margin-top: 50px;
     margin-bottom: 50px;
     padding:20px;
@@ -19,6 +19,7 @@ body
     margin-bottom: 20px;
     padding-bottom: 12px;
     gap: 34px;
+
 }
 
 .nav-link
@@ -39,7 +40,14 @@ body
     border: 10px solid transparent;
 }
 
-h1, h2
+h1
+{
+    text-align: center;
+    color:#333;
+    
+}
+
+h2
 {
     text-align: center;
     color:#333;
@@ -69,7 +77,7 @@ h1, h2
 
 footer
 {
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
     border-top: 2px solid #9400D3;
     padding-top: 20px;

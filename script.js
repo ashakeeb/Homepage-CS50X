@@ -7,13 +7,30 @@ function sendMessage()
     if (name === '' || email === '' || message === '')
     {
         document.querySelector('.alert').style.display = 'block';
+        return;
     }
-    else
-    {
-        alert("There is no Backend baby :D")
-    }
+
+    fetch('save.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body:
+            'name=' + encodeURIComponent(name) +
+            '&email=' + encodeURIComponent(email) +
+            '&message=' + encodeURIComponent(message)
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+
+        document.querySelector('#name').value = '';
+        document.querySelector('#email').value = '';
+        document.querySelector('#message').value = '';
+    });
 }
 
-function hidde(){
+function hidde()
+{
     document.querySelector('.alert').style.display = 'none';
 }
